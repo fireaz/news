@@ -1,5 +1,9 @@
-<h1>Hello World</h1>
+@extends(theme_layout())
 
-<p>
-    This view is loaded from module: {!! config('$LOWER_NAME$.name') !!}
-</p>
+@section('content')
+    <h1>Hello World</h1>
+
+    <p>
+        This view is loaded from module: {!! config('$LOWER_NAME$.name') !!}
+    </p>
+@endsection

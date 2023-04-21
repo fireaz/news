@@ -1,49 +1,30 @@
 {
-  "name": "fireaz/boilerplate",
-  "description": "A PHP library for boilerplate code syntax.",
-  "license": "MIT",
-  "keywords": [],
-  "homepage": "https://github.com/fireaz/laravel-package-boilerplate",
-  "authors": [
-    {
-      "name": "nguyen van hau",
-      "email": "nguyenvanhau.soft@gmail.com",
-      "role": "Developer"
-    }
-  ],
-  "require": {
-    "fireaz/laravel-package": "dev-main"
-  },
-  "require-dev": {},
-  "autoload": {
-    "files": [
-      "helpers/constraint.php",
-      "helpers/function.php"
+    "name": "fireaz/news",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Nguyen Van Hau",
+        "email": "nguyenvanhau.soft@gmail.com",
+        "role": "Developer",
+        "homepage": "https://github.com/devhau"
+      }
     ],
-    "psr-4": {
-      "FireAZ\\Boilerplate\\": "src/"
+    "require": {
+      "fireaz/reojs": "dev-main",
+      "fireaz/platform": "dev-main"
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["FireAZ\\News\\NewsServiceProvider"],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "FireAZ\\News\\": "src",
+            "FireAZ\\News\\Database\\Factories\\": "database/factories",
+            "FireAZ\\News\\Database\\Seeders\\": "database/seeders"
+        }
     }
-  },
-  "autoload-dev": {
-    "psr-4": {}
-  },
-  "scripts": {
-    "analyse": "vendor/bin/phpstan analyse",
-    "test": "vendor/bin/pest",
-    "test-coverage": "vendor/bin/pest --coverage",
-    "format": "vendor/bin/pint"
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "FireAZ\\Boilerplate\\BoilerplateServiceProvider"
-      ],
-      "aliases": {}
-    }
-  },
-  "config": {
-    "sort-packages": true
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": false
 }

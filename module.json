@@ -1,0 +1,11 @@
+{
+    "id":"module-news-3c7e2aec-b247-451a-a7d2-9cb05b531ed24579625",
+    "name": "News",
+    "alias": "news",
+    "description": "News là Module hỗ trợ tạo ra 1 website nhanh chóng với các chức năng tạo trang, tạo bài viết theo nhóm bài viết, cũng hỗ trợ seo tốt nhất có thể trong hệ thống giúp tối ưu nhanh chóng",
+    "keywords": [],
+    "priority": 200,
+    "aliases": {},
+    "namespace":"FireAZ\\News",
+    "requires": []
+}
