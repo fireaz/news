@@ -11,3 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
+Route::get('124455',function(){
+    return '121312';
+});
