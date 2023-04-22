@@ -13,6 +13,4 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('124455',function(){
-    return '121312';
-});
+Route::get('/blogs', \FireAZ\News\Http\Livewire\Web\BlogIndex::class);
