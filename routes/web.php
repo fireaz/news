@@ -13,4 +13,4 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/blogs', \FireAZ\News\Http\Livewire\Web\BlogIndex::class);
+Route::get('/news', \FireAZ\News\Http\Livewire\Web\BlogIndex::class);

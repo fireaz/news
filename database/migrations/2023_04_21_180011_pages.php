@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('summary', 1000)->nullable();
             $table->longText('content')->nullable();
             $table->smallInteger('content_type')->nullable();
+            $table->string('layout')->nullable();
             $table->longText('data_prev')->nullable();
             $table->integer('level_data')->nullable()->default(0);
             $table->integer('view_count')->nullable()->default(0);
