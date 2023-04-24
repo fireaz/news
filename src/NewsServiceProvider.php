@@ -4,7 +4,9 @@ namespace FireAZ\News;
 
 use Illuminate\Support\ServiceProvider;
 use FireAZ\LaravelPackage\ServicePackage;
+use FireAZ\News\Sitemap\PostSitemap;
 use FireAZ\Platform\Traits\WithServiceProvider;
+use FireAZ\Seo\Facades\Sitemap;
 
 class NewsServiceProvider extends ServiceProvider
 {
@@ -41,6 +43,8 @@ class NewsServiceProvider extends ServiceProvider
                 ];
             });
         }
+
+        Sitemap::AddSitemap(PostSitemap::class);
     }
     public function packageBooted()
     {

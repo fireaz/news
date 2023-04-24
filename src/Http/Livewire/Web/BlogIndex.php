@@ -11,7 +11,7 @@ use Livewire\WithPagination;
 class BlogIndex extends Component
 {
     use WithPagination;
-    public $posts;
+    public Collection $posts;
 
     public $pageNumber = 1;
 
