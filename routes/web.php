@@ -14,4 +14,4 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/news', \FireAZ\News\Http\Livewire\Web\BlogIndex::class)->name('news.list');
-Route::get('{slug}.html', \FireAZ\News\Http\Livewire\Web\PostIndex::class)->name('news.post');
+Route::get('/p/{slug}.html', \FireAZ\News\Http\Livewire\Web\PostIndex::class)->name('news.post');
