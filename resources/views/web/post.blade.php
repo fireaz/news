@@ -8,7 +8,7 @@
             </h1>
         </div>
         <div class="card-body">
-            {!! $post->content !!}
+            {!! BladeToHtml($post->content) !!}
         </div>
     </div>
 </div>
