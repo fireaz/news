@@ -15,9 +15,8 @@ class PostIndex extends Component
     public function mount($slug)
     {
         $this->post = ArrayWireable::fromLivewire(Post::where('slug', $slug)->first());
-        Theme::setTitle($this->post->title);
         Seo::SeoInfoTransformer(function (\FireAZ\Seo\SeoInfo $seo) {
-            $seo->title = Theme::getTitle();
+            $seo->title = $this->post->title;
             // if ($urlImage)
             //     $seo->image = url($urlImage);
             $seo->description = $this->post->description ?? 'Free Online Tutorials - Collection of technical and non technical, Free tutorials and reference manuals with examples for Java8, XStream, Scrum, Guava, Memcached, Neo4J, CICS, Fortran, EasyMock, Object Oriented Analysis & Design, Tika, DOM, AngularJS, IMS-DB, NGN, Sed, WCF, JPA, Apache POI, Signals and Systems, JOGL, DB2, PhoneGap, SVG, VSAM, COBOL, XSD, XPath, Redis, Java XML, VBA, JFreeChart, Lucene, Selenium , DTD, Powerpoint, Tcl/Tk, XML, Software Engineering and many more latest technologies';
